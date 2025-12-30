@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxi3f0pttcd7s"]
+
+[ext_resource type="Texture2D" uid="uid://bkqgb0k5x78ia" path="res://Wave Shooter Assets/Square.png" id="1_qxp0b"]
+[ext_resource type="Script" uid="uid://bwe2f7hclgxvh" path="res://bullet.gd" id="2_2wtbm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
+size = Vector2(16, 16)
+
+[node name="bullet" type="Sprite2D"]
+texture = ExtResource("1_qxp0b")
+script = ExtResource("2_2wtbm")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-8, -8, 16, 16)
+
+[node name="Hitbox" type="Area2D" parent="." groups=["Enemy_damage"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+visible = false
+shape = SubResource("RectangleShape2D_v8qja")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
