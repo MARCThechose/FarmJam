@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://swo3bl2rhjd3"
-path="res://.godot/imported/Circle.png-79f44e4b7ff3a168cf35fe641cd20483.ctex"
+uid="uid://c3xkk0cvdw06l"
+path="res://.godot/imported/firefly-export.png-9307404f1f4240c01dbd1380c22f8099.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Wave Shooter Assets/Circle.png"
-dest_files=["res://.godot/imported/Circle.png-79f44e4b7ff3a168cf35fe641cd20483.ctex"]
+source_file="res://sprites/character/firefly-export.png"
+dest_files=["res://.godot/imported/firefly-export.png-9307404f1f4240c01dbd1380c22f8099.ctex"]
 
 [params]
 

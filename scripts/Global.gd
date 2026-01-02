@@ -2,6 +2,10 @@ extends Node
 
 var node_creation_parent = null
 var player = null
+var arena = null
+var args = 0
+var score = 0
+
 func Instance_node(node, location, parent):
 	var node_instance = node.instantiate() 
 	parent.add_child(node_instance)

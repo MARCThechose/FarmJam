@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://chbdxv1vx4edw"
-path="res://.godot/imported/Font.ttf-1216769ec8d4274dd0f06e5186778116.fontdata"
+path="res://.godot/imported/Font.ttf-dfdc407c24ce78b26edce7c09543d818.fontdata"
 
 [deps]
 
-source_file="res://Wave Shooter Assets/Font.ttf"
-dest_files=["res://.godot/imported/Font.ttf-1216769ec8d4274dd0f06e5186778116.fontdata"]
+source_file="res://sprites/Wave Shooter Assets/Font.ttf"
+dest_files=["res://.godot/imported/Font.ttf-dfdc407c24ce78b26edce7c09543d818.fontdata"]
 
 [params]
 

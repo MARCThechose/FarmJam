@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkqgb0k5x78ia"
-path="res://.godot/imported/Square.png-26eab5a92004a21fda4b16117c8108e2.ctex"
+uid="uid://way6b240v8tv"
+path="res://.godot/imported/bushmap.png-fc9efb9d2e6c6ff0e1ef062c1f9f47bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Wave Shooter Assets/Square.png"
-dest_files=["res://.godot/imported/Square.png-26eab5a92004a21fda4b16117c8108e2.ctex"]
+source_file="res://scenes/bushmap.png"
+dest_files=["res://.godot/imported/bushmap.png-fc9efb9d2e6c6ff0e1ef062c1f9f47bb.ctex"]
 
 [params]
 

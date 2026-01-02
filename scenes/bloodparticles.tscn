@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dctb8kchp1xjd"]
+
+[ext_resource type="Texture2D" uid="uid://swo3bl2rhjd3" path="res://sprites/Wave Shooter Assets/Circle.png" id="1_t1g17"]
+[ext_resource type="Script" uid="uid://dndbe4ufecbk6" path="res://scripts/bloodparticles.gd" id="2_shytx"]
+
+[node name="bloodparticles" type="CPUParticles2D"]
+z_index = -10
+texture = ExtResource("1_t1g17")
+lifetime = 0.2
+explosiveness = 1.0
+randomness = 1.0
+spread = 18.9
+gravity = Vector2(0, 0)
+initial_velocity_max = 527.78
+scale_amount_min = 0.05
+scale_amount_max = 0.12
+color = Color(0.26427245, 2.571987e-07, 8.4228816e-08, 1)
+script = ExtResource("2_shytx")
+
+[node name="Freeze" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Freeze" to="." method="_on_freeze_timeout"]

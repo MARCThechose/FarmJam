@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqgu46deygrhb"]
+
+[ext_resource type="Script" uid="uid://cogqs3e42p0vf" path="res://scripts/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bkqgb0k5x78ia" path="res://sprites/Wave Shooter Assets/Square.png" id="1_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
+
+[node name="player" type="CharacterBody2D"]
+slide_on_ceiling = false
+script = ExtResource("1_4flbx")
+
+[node name="sprite" type="Sprite2D" parent="."]
+modulate = Color(0.13333334, 0, 0.5764706, 1)
+texture = ExtResource("1_onrkg")
+
+[node name="reload" type="Timer" parent="."]
+wait_time = 0.111
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3vyb7")
+
+[connection signal="timeout" from="reload" to="." method="_on_reload_timeout"]
