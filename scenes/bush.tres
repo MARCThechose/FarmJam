@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://6jog1as8kk63"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://6jog1as8kk63"]
 
 [ext_resource type="Texture2D" uid="uid://way6b240v8tv" path="res://scenes/bushmap.png" id="1_wjbqs"]
+[ext_resource type="Texture2D" uid="uid://cu45w2t8fpxl8" path="res://sprites/character/worldenv.png" id="2_eho5f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fobn5"]
 texture = ExtResource("1_wjbqs")
@@ -77,9 +78,17 @@ texture = ExtResource("1_wjbqs")
 7:0/0/terrains_peering_bit/left_side = 0
 7:0/0/terrains_peering_bit/top_left_corner = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66tu5"]
+texture = ExtResource("2_eho5f")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "bush"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_fobn5")
+sources/1 = SubResource("TileSetAtlasSource_66tu5")

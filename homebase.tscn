@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://rmrr153uwyo5"]
+
+[ext_resource type="Script" uid="uid://uasjrkcy8mtp" path="res://plant.gd" id="1_y6a7v"]
+[ext_resource type="Texture2D" uid="uid://bkqgb0k5x78ia" path="res://sprites/Wave Shooter Assets/Square.png" id="2_6377j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xl7d1"]
+size = Vector2(16.000002, 16)
+
+[node name="homebase" type="Area2D"]
+script = ExtResource("1_y6a7v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.33465543, 0.09566962, 1)
+position = Vector2(0, -4)
+scale = Vector2(0.12499999, 0.5)
+texture = ExtResource("2_6377j")
+
+[node name="plant" type="CollisionShape2D" parent="."]
+position = Vector2(-4.470349e-08, -4)
+scale = Vector2(0.12499999, 0.5)
+shape = SubResource("RectangleShape2D_xl7d1")
+
+[node name="plantimnu" type="Timer" parent="."]
+wait_time = 0.2

@@ -4,19 +4,19 @@ enum State { FLOATING, ATTACKING }
 var current_state = State.FLOATING
 
 @export var float_speed = 50.0 
-@export var attack_speed = 250.0 # How fast it lunges at the player
-@export var hover_distance = 150.0 # How far from the player it tries to stay
+@export var attack_speed = 250.0 
+@export var hover_distance = 150.0
 
-# --- Floating (Sine Wave) Parameters ---
-@export var float_amplitude = 20.0 # How high and low it bobs
-@export var float_frequency = 2.0  # How fast it bobs
+
+@export var float_amplitude = 20.0 
+@export var float_frequency = 2.0  
 var time_passed = 0.0
 
-# --- Health and Immunity ---
+
 var imnu = false
 var hp = 3
 
-# --- Other ---
+
 var bloodPar = preload("res://scenes/bloodparticles.tscn")
 var attack_target_position = Vector2.ZERO
 
@@ -29,7 +29,7 @@ func _physics_process(delta):
 	time_passed += delta
 	
 	if Global.player == null:
-		return # Do nothing if there's no player
+		return 
 		
 	# This is our State Machine
 	match current_state:
