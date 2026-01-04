@@ -31,16 +31,6 @@ func _physics_process(delta):
 		if collider.is_in_group("enemy"):
 			die()
 	
-	if Input.is_action_pressed("click") and Global.node_creation_parent != null and can_shoot:
-		var b = bullet_scene.instantiate()
-		b.global_position = global_position
-		Global.node_creation_parent.add_child(b)
-		$reload.start()
-		can_shoot = false
-
-func _on_reload_timeout():
-	can_shoot = true
-
 func die():
 	Global.arena.emit_signal("game_over")
 	queue_free()

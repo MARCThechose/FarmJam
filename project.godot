@@ -30,6 +30,8 @@ window/size/viewport_height=360
 Enemy_damage=""
 enemys=""
 enemi=""
+dronecam=""
+plantb=""
 
 [input]
 

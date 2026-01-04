@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 
-[node name="player" type="CharacterBody2D"]
+[node name="Drone" type="CharacterBody2D" groups=["dronecam"]]
 slide_on_ceiling = false
 script = ExtResource("1_4flbx")
 
@@ -18,6 +18,7 @@ wait_time = 0.111
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3vyb7")

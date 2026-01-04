@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xl7d1"]
 size = Vector2(16.000002, 16)
 
-[node name="homebase" type="Area2D"]
+[node name="homebase" type="Area2D" groups=["plantb"]]
 script = ExtResource("1_y6a7v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,5 +20,17 @@ position = Vector2(-4.470349e-08, -4)
 scale = Vector2(0.12499999, 0.5)
 shape = SubResource("RectangleShape2D_xl7d1")
 
+[node name="HPlabel" type="Label" parent="plant"]
+offset_left = -24.000002
+offset_top = -22.0
+offset_right = 48.000015
+offset_bottom = 1.0
+scale = Vector2(1.020356, 0.1797207)
+text = "test"
+autowrap_trim_flags = 0
+justification_flags = 168
+
 [node name="plantimnu" type="Timer" parent="."]
 wait_time = 0.2
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

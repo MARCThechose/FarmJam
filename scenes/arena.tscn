@@ -85,7 +85,7 @@ scale = Vector2(3.8437512, 4.6875)
 texture = ExtResource("7_oexds")
 
 [node name="homebase" parent="." instance=ExtResource("8_naajo")]
-position = Vector2(633, 308)
-scale = Vector2(-4.057467, 7.200001)
+position = Vector2(634, 304)
+scale = Vector2(3.0028472, 4.1997533)
 
 [connection signal="timeout" from="spawner" to="." method="_on_spawner_timeout"]
