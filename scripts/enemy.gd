@@ -90,9 +90,3 @@ func _on_area_entered(body):
 	if body.is_in_group("plantb"):
 		body.take_damage(damage)
 		queue_free()
-	elif body == Global.plantNode and current_state == State.ATTACKING:
-		body.take_damage(damage)
-		current_state = State.FLOATING
-		$AttackEnemy.wait_time = randf_range(2.0, 4.0)
-		$AttackEnemy.start()
-		queue_free()
