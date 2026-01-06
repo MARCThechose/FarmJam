@@ -1,4 +1,4 @@
-extends Area2D
+extends ""
 
 enum State { FLOATING, ATTACKING }
 var current_state = State.FLOATING
@@ -10,6 +10,9 @@ var current_state = State.FLOATING
 @export var damage = 1
 @export var float_amplitude = 20.0 
 @export var float_frequency = 2.0  
+@export var enemy_data: EnemyData
+
+var current_hp: int
 var time_passed = 0.0
 
 

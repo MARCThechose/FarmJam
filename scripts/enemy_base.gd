@@ -3,9 +3,12 @@ extends Area2D
 
 @export var damage: int = 1
 @export var max_hp = 3
+@export var enemy_data: EnemyData 
 
 var current_hp: int
 var imnu: bool = false
+
+@export var  time_passed = 0.00
 
 const BLOOD_PAR_SCENE = preload("res://scenes//bloodparticles.tscn")
 
