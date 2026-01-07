@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkgtg8lekpv74"]
 
-[ext_resource type="Script" uid="uid://y7rb62guhlvq" path="res://scenes/enemy_base.gd" id="1_md0e3"]
+[ext_resource type="Script" uid="uid://c6hrjwmlolqwu" path="res://scripts/enemy_base.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://swo3bl2rhjd3" path="res://sprites/Wave Shooter Assets/Circle.png" id="2_md0e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
@@ -26,6 +26,4 @@ shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Inmu" to="." method="_on_inmu_timeout"]
-[connection signal="timeout" from="AttackEnemy" to="." method="_on_attack_enemy_timeout"]
