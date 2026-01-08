@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://crll8iqt4qram" path="res://sprites/fonts/LuckiestGuy-Regular.ttf" id="3_27ga2"]
 [ext_resource type="Script" uid="uid://dp8grmpxx1b2l" path="res://scripts/points.gd" id="4_h0wof"]
 [ext_resource type="Texture2D" uid="uid://cvd0cjvwmm2pt" path="res://sprites/character/field.png" id="5_7ft05"]
-[ext_resource type="TileSet" uid="uid://6jog1as8kk63" path="res://scenes/bush.tres" id="6_4ag8t"]
+[ext_resource type="TileSet" uid="uid://6jog1as8kk63" path="res://resources/bush.tres" id="6_4ag8t"]
 [ext_resource type="Texture2D" uid="uid://crdonen1eklom" path="res://sprites/character/worldtree.png" id="7_oexds"]
-[ext_resource type="PackedScene" uid="uid://rmrr153uwyo5" path="res://homebase.tscn" id="8_naajo"]
+[ext_resource type="PackedScene" path="res://scenes/homebase.tscn" id="8_naajo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h0wof"]
 font = ExtResource("3_27ga2")

@@ -8,8 +8,6 @@ extends Area2D
 var current_hp: int
 var imnu: bool = false
 
-@export var  time_passed = 0.00
-
 const BLOOD_PAR_SCENE = preload("res://scenes//bloodparticles.tscn")
 
 func _ready():
@@ -36,5 +34,5 @@ func _on_imnu_timeout():
 	modulate = Color.RED
 	imnu = false
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass

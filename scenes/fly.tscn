@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2235m38ank1e"]
+
+[ext_resource type="Texture2D" uid="uid://cu45w2t8fpxl8" path="res://sprites/character/worldenv.png" id="2_2lkvx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
+atlas = ExtResource("2_2lkvx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
+atlas = ExtResource("2_2lkvx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4w8v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ra3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uy6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(24, 11)
+
+[node name="enemy" type="Area2D"]
+
+[node name="Fireflu" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5000005, 4.7683716e-07)
+scale = Vector2(2.5625, 2.625)
+sprite_frames = SubResource("SpriteFrames_c4w8v")
+
+[node name="Inmu" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="AttackEnemy" type="Timer" parent="."]
+one_shot = true
+
+[node name="Solid Collison" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Inmu" to="." method="_on_inmu_timeout"]
+[connection signal="timeout" from="AttackEnemy" to="." method="_on_attack_enemy_timeout"]

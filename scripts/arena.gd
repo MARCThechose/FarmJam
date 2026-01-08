@@ -1,6 +1,6 @@
 extends Node2D
 
-var enemy = preload("res://scenes/enemy.tscn")
+var enemy = preload("res://scenes/enemy_walker.tscn")
 signal game_over
 
 func _ready():

@@ -1,7 +1,5 @@
 extends Area2D
 
-signal plantimnu
-
 @export var maxHP = 100
 var currentHP = 100
 
