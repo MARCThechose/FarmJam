@@ -11,6 +11,9 @@ var imnu: bool = false
 const BLOOD_PAR_SCENE = preload("res://scenes//bloodparticles.tscn")
 
 func _ready():
+		if max_hp == null:
+				max_hp = 3 
+		
 		current_hp = max_hp
 		
 func take_damage(amount: int):
