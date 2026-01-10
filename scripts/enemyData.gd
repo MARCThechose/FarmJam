@@ -16,6 +16,7 @@ class_name EnemyData
 @export var attack_speed: float = 300.0 
 
 # --- SHOOTER-SPECIFIC STATS
-@export var fire_rate: float = 300
+@export var shoot_cooldown: float = 1.0
 @export var charge_range: float = 100.0
+@export var charge_up_time: float = 1.0
 @export var bullet_scene: PackedScene

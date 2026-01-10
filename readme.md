@@ -6,3 +6,5 @@ day 1  finish shooting mehanics
 day 2: took a break happy newyear
 
 day 3: searched for assets and stuff, unable to upload cuz no net
+
+day 4 worked on some system     

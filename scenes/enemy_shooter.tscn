@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxs1covv2ni1b"]
+
+[ext_resource type="Script" uid="uid://d3civ1miisjje" path="res://scripts/enemy_shooter.gd" id="1_amqcw"]
+[ext_resource type="PackedScene" uid="uid://cxi3f0pttcd7s" path="res://scenes/bullet.tscn" id="2_t4tug"]
+[ext_resource type="Script" uid="uid://kasvw7b4ao58" path="res://scripts/enemyData.gd" id="3_5rxrl"]
+[ext_resource type="Texture2D" uid="uid://swo3bl2rhjd3" path="res://sprites/Wave Shooter Assets/Circle.png" id="4_fkp5b"]
+
+[sub_resource type="Resource" id="Resource_mneqe"]
+script = ExtResource("3_5rxrl")
+bullet_scene = ExtResource("2_t4tug")
+metadata/_custom_type_script = "uid://kasvw7b4ao58"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+size = Vector2(24, 11)
+
+[node name="enemy" type="Area2D"]
+script = ExtResource("1_amqcw")
+enemy_data = SubResource("Resource_mneqe")
+
+[node name="shooter" type="Sprite2D" parent="."]
+modulate = Color(0.61402285, 0, 0.3414449, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.123046875, 0.106230944)
+texture = ExtResource("4_fkp5b")
+
+[node name="Inmu" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="AttackEnemy" type="Timer" parent="."]
+one_shot = true
+
+[node name="Solid Collison" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="FireTimer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Inmu" to="." method="_on_inmu_timeout"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

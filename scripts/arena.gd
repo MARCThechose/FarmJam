@@ -1,11 +1,12 @@
 extends Node2D
 
-var enemy = preload("res://scenes/enemy_walker.tscn")
+var enemy = preload("res://scenes/enemy_shooter.tscn")
 signal game_over
 
 func _ready():
 	Global.node_creation_parent = self
 	Global.arena = self
+	Global.plantNode = $homebase
 	
 	var callable = Callable(self, "_on_game_over")
 	if not is_connected("game_over", callable):
