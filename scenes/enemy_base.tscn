@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c55onqiqok4fj"]
 
-[ext_resource type="Script" uid="uid://15pdo2y27suj" path="res://scripts/enemy_walker.gd" id="1_sw0xa"]
+[ext_resource type="Script" uid="uid://c6hrjwmlolqwu" path="res://scripts/enemy_base.gd" id="1_sw0xa"]
 [ext_resource type="Texture2D" uid="uid://swo3bl2rhjd3" path="res://sprites/Wave Shooter Assets/Circle.png" id="2_j1ss0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
@@ -9,7 +9,7 @@ size = Vector2(24, 11)
 [node name="enemy" type="Area2D"]
 script = ExtResource("1_sw0xa")
 
-[node name="walker" type="Sprite2D" parent="."]
+[node name="visual" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
 scale = Vector2(0.123046875, 0.106230944)
 texture = ExtResource("2_j1ss0")
@@ -26,5 +26,10 @@ shape = SubResource("RectangleShape2D_md0e3")
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="DeathFlair" type="Timer" parent="."]
+
+[node name="DeathTimer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Inmu" to="." method="_on_imnu_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
