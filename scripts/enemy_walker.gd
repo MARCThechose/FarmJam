@@ -39,8 +39,6 @@ func _state_floating(delta):
 	
 	var float_offset = sin(time_passed * enemy_data.float_frequency) * enemy_data.float_amplitude
 	velocity.y += float_offset
-		
-	# 4. Apply movement
 	global_position += velocity * delta
 	
 func _state_charging(delta):

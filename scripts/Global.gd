@@ -6,7 +6,6 @@ var arena = null
 var args = 0
 var score = 0
 
-# flag variables
 var plantNode = null
 
 func Instance_node(node, location, parent):
