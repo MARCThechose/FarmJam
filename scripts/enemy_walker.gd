@@ -51,4 +51,4 @@ func _state_charging(delta):
 func _on_area_entered(body):
 	if body.is_in_group("plantb"):
 		body.take_damage(enemy_data.damage)
-		queue_free() # Suicide on hit 
+		queue_free()  

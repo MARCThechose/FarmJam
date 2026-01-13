@@ -2,18 +2,11 @@
 extends "res://scripts/enemy_base.gd" 
 
 
-enum State {HOVERING, CHARGING_SHOT, DYING}
+enum State {HOVERING, CHARGING_SHOT}
 var current_state = State.HOVERING
 var time_passed: float = 0.0
 
 @onready var fire_timer: Timer = $FireTimer 
-#@onready var death_timer: Timer =$DeathTimer 
-@onready var sprite_shoot: Sprite2D =$visual
-
-@export var death_shake:float = 0.5
-#@export var death_delay: float = 3.0
-
-var orig_posi: Vector2 
 
 func _ready():
 	super._ready()
@@ -36,16 +29,12 @@ func _physics_process(delta: float):
 			if distance_to_plant <= enemy_data.charge_range:
 				current_state = State.CHARGING_SHOT
 				fire_timer.start() 
-		State.CHARGING_SHOT:
-			pass
-		State.DYING:
-			var shake_offset = Vector2(randf_range(-death_shake, death_shake),
-									   randf_range(-death_shake, death_shake))
-			global_position = orig_posi + shake_offset
 				
 	
 
 func _state_hovering(delta):
+	# The goal of a shooter in this state is simply to APPROACH the plant
+	
 	var direction_to_plant = global_position.direction_to(Global.plantNode.global_position)
 	
 	var velocity = direction_to_plant * enemy_data.move_speed
@@ -54,8 +43,6 @@ func _state_hovering(delta):
 	velocity.y += float_offset
 		
 	global_position += velocity * delta
-
-	
 
 func fire_bullet():
 	if Global.plantNode == null: return
@@ -75,7 +62,5 @@ func fire_bullet():
 func _on_fire_timer_timeout():
 	if current_state == State.CHARGING_SHOT:
 		fire_bullet()
-		
+	
 		start_dying_visuals()
-		
-		

@@ -55,7 +55,6 @@ func start_dying_visuals():
 	death_timer.one_shot = true
 	death_timer.start()
 
-	visual_sprite.modulate = Color.WHITE # Clean slate
 	var tween = create_tween()
 	tween.stop()
 	tween.tween_property(visual_sprite, "modulate", Color.RED, death_delay).set_ease(Tween.EASE_OUT)
