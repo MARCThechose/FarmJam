@@ -1,18 +1,17 @@
 # res://scripts/Stats.gd
 extends Node
 
-# --- PLANT STATS ---
+
 var plant_max_hp: float = 100.0
-var plant_fire_rate: float = 1.0    # Shots per second
+var plant_fire_rate: float = 1.0   
 var plant_damage: int = 1
-var plant_pierce: int = 1          # How many enemies a leaf can hit
+var plant_pierce: int = 1          
 
-# --- DRONE STATS ---
+
 var drone_speed: float = 200.0
-var drone_collection_radius: float = 50.0 # For picking up resources
-var drone_knockback_power: float = 300.0  # For the "Push" ability
+var drone_collection_radius: float = 50.0
+var drone_knockback_power: float = 300.0 
 
-# --- LEVELING SYSTEM ---
 var current_level: int = 1
 var current_xp: int = 0
 var xp_to_next_level: int = 10
@@ -27,7 +26,7 @@ func add_xp(amount: int):
 func level_up():
 	current_level += 1
 	current_xp -= xp_to_next_level
-	xp_to_next_level = int(xp_to_next_level * 1.4) + 5 # Scale difficulty
+	xp_to_next_level = int(xp_to_next_level * 1.4) + 5
 	
 	emit_signal("leveled_up", current_level)
-	get_tree().paused = true # Pause for the UI
+	get_tree().paused = true

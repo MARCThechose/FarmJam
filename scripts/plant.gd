@@ -4,18 +4,27 @@ extends Area2D
 var currentHP = 100
 
 @onready var hp = $plant/HPlabel
-
+@onready var hp_label = $plant/HPlabel
+@onready var health_bar = $healthBar
 func _ready():
 	Global.plantNode = self
-	update_hp_disc()
+	currentHP = Stats.plant_max_hp
+	set_health_bar()
 	
-func update_hp_disc():
-	hp.text = "HP:" + str(currentHP)
+	health_bar.max_value = Stats.plant_max_hp
+	health_bar.value = currentHP
+	
+	update_ui()
 
+func update_ui():
+	health_bar.value = currentHP
+	
+func set_health_bar() -> void:
+	$healthBar.value = currentHP
 func take_damage(damage):
 	currentHP -= damage
 	print("touchy!")
-	update_hp_disc()
+	set_health_bar()
 	if currentHP < 0:
 		die()
 
