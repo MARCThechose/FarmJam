@@ -18,7 +18,7 @@ func _ready():
 
 func update_ui():
 	health_bar.value = currentHP
-	
+
 func set_health_bar() -> void:
 	$healthBar.value = currentHP
 func take_damage(damage):

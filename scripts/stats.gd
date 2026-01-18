@@ -7,7 +7,6 @@ var plant_fire_rate: float = 1.0
 var plant_damage: int = 1
 var plant_pierce: int = 1          
 
-
 var drone_speed: float = 200.0
 var drone_collection_radius: float = 50.0
 var drone_knockback_power: float = 300.0 
