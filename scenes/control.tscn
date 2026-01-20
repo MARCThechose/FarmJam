@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr53wwwbo0uan"]
+
+[ext_resource type="Script" uid="uid://c35lf4ry0dl48" path="res://scenes/play.gd" id="1_5p55f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 109.0
+offset_right = 390.0
+offset_bottom = 215.0
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play"
+script = ExtResource("1_5p55f")
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="VBoxContainer/Play" method="_on_pressed"]
