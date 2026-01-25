@@ -1,7 +1,18 @@
-[gd_scene format=3 uid="uid://bjphxxkx5yecn"]
+[gd_scene load_steps=3 format=3 uid="uid://bjphxxkx5yecn"]
+
+[ext_resource type="Texture2D" uid="uid://7ubfmbrac0ip" path="res://sprites/character/firefly.png" id="1_wd4fn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ght1v"]
+radius = 18.439089
 
 [node name="plant basic bullet" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wd4fn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ght1v")
