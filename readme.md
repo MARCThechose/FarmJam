@@ -6,3 +6,5 @@ farm jam is a game project
 
 - didnt finish tomorrow though. still made some educational tjhings with this
 ytiuykjhjkh
+
+its just me :<>
